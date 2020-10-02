@@ -1,3 +1,4 @@
+// Authentication 
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:myshop/auth/databse.dart';
 import 'package:myshop/auth/sign_in.dart';
