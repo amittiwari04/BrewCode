@@ -37,19 +37,23 @@ class _HomeState extends State<Home> {
       child: Scaffold(
         backgroundColor: Colors.brown[50],
         appBar: AppBar(
-          title: Text('Brew Code'),
+          title: Text(
+            'Brew Code',
+          ),
           backgroundColor: Colors.brown[400],
           actions: [
             FlatButton.icon(
-                onPressed: () async {
-                  await _auth.signOut();
-                },
-                icon: Icon(Icons.person),
-                label: Text('Log Out')),
+              onPressed: () async {
+                await _auth.signOut();
+              },
+              icon: Icon(Icons.person),
+              label: Text('Log Out'),
+            ),
             FlatButton.icon(
-                onPressed: () => _showBottomSheet(),
-                icon: Icon(Icons.settings),
-                label: Text('Setting'))
+              onPressed: () => _showBottomSheet(),
+              icon: Icon(Icons.settings),
+              label: Text('Setting'),
+            )
           ],
         ),
         body: Container(
