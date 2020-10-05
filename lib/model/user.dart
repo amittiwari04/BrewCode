@@ -1,7 +1,9 @@
 class UserId {
   final String uid;
 
-  UserId({this.uid});
+  UserId({
+    this.uid,
+  });
 }
 
 class UserData {
@@ -10,5 +12,10 @@ class UserData {
   final String sugars;
   final int strength;
 
-  UserData({this.uid, this.name, this.sugars, this.strength});
+  UserData({
+    this.uid,
+    this.name,
+    this.sugars,
+    this.strength,
+  });
 }

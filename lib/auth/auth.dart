@@ -1,10 +1,10 @@
 // Authentication 
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:myshop/auth/databse.dart';
-import 'package:myshop/auth/sign_in.dart';
-import 'package:myshop/model/brew.dart';
+//import 'package:myshop/auth/sign_in.dart';
+//import 'package:myshop/model/brew.dart';
 import 'package:myshop/model/user.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
+//import 'package:cloud_firestore/cloud_firestore.dart';
 
 class AuthService {
   final FirebaseAuth _auth = FirebaseAuth.instance;
@@ -57,6 +57,7 @@ class AuthService {
       return null;
     }
   }
+
   signInWithPhone(AuthCredential credential) async {
     try {
       UserCredential result = await _auth.signInWithCredential(credential);
@@ -67,7 +68,6 @@ class AuthService {
       return null;
     }
   }
-
 
 // sign out
   Future signOut() async {

@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:myshop/auth/auth.dart';
 import 'package:myshop/model/user.dart';
 import 'package:myshop/screens/SplashScreen.dart';
-import 'package:myshop/screens/wrapper.dart';
+//import 'package:myshop/screens/wrapper.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:provider/provider.dart';
 

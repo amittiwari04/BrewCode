@@ -5,7 +5,7 @@ import 'package:myshop/model/brew.dart';
 import 'package:myshop/screens/brewList.dart';
 import 'package:myshop/screens/settings_form.dart';
 import 'package:provider/provider.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
+//import 'package:cloud_firestore/cloud_firestore.dart';
 
 class Home extends StatefulWidget {
   @override
@@ -20,7 +20,10 @@ class _HomeState extends State<Home> {
         context: context,
         builder: (context) {
           return Container(
-            padding: EdgeInsets.symmetric(vertical: 20, horizontal: 60),
+            padding: EdgeInsets.symmetric(
+              vertical: 20,
+              horizontal: 60,
+            ),
             child: SettingForm(),
           );
         });
@@ -50,10 +53,13 @@ class _HomeState extends State<Home> {
           ],
         ),
         body: Container(
-            decoration: BoxDecoration(
-              image: DecorationImage(image:AssetImage('assets/coffee_bg.png') )
+          decoration: BoxDecoration(
+            image: DecorationImage(
+              image: AssetImage('assets/coffee_bg.png'),
             ),
-            child: BrewList()),
+          ),
+          child: BrewList(),
+        ),
       ),
     );
   }
