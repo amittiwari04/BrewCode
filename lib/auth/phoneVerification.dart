@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
+//import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:myshop/auth/auth.dart';
-import 'package:myshop/auth/databse.dart';
+//import 'package:myshop/auth/databse.dart';
 import 'package:myshop/screens/otp.dart';
 
 class MobileOtpScreen extends StatefulWidget {
@@ -14,8 +14,8 @@ class MobileOtpScreen extends StatefulWidget {
   _MobileOtpScreenState createState() => _MobileOtpScreenState();
 }
 
-class _MobileOtpScreenState extends State<MobileOtpScreen> {
-  AuthService _auth=AuthService();
+class _MobileOtpSc  reenState extends State<MobileOtpScreen> {
+  AuthService _auth = AuthService();
   bool isCodeSend = false;
   final FirebaseAuth _firebaseAuth = FirebaseAuth.instance;
   String _verificationId;

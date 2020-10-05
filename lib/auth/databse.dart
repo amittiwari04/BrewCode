@@ -1,4 +1,4 @@
-import 'package:myshop/auth/authentication.dart';
+//import 'package:myshop/auth/authentication.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:myshop/model/brew.dart';
 import 'package:myshop/model/user.dart';
@@ -13,13 +13,13 @@ class DataBaseService {
 
   Future<void> updateUserData(String sugar, int strength, String name) async {
     return await brewCollection.doc(uid).set({
-      'name':name,
-      'sugar':sugar,
-      'strength':strength,
-    }
-    );
+      'name': name,
+      'sugar': sugar,
+      'strength': strength,
+    });
   }
- // list from snapshot
+
+  // list from snapshot
   List<Brew> _brewListFromSnapshot(QuerySnapshot snapshot) {
     return snapshot.docs.map((doc) {
       return Brew(
@@ -29,6 +29,7 @@ class DataBaseService {
       );
     }).toList();
   }
+
 //    List<Brew> _brewListFromSnapshot(QuerySnapshot snapshot) {
 //  //  print(snapshot.size.toString());
 //    return snapshot.docs.map((doc){
@@ -40,12 +41,12 @@ class DataBaseService {
 //      );
 //    }).toList();
 //  }
-  Stream<List<Brew>> get brews{
+  Stream<List<Brew>> get brews {
     return brewCollection.snapshots().map(_brewListFromSnapshot);
-
   }
+
   //user data from snapshot
-  UserData _userDataFromSnapShot(DocumentSnapshot snapshot){
+  UserData _userDataFromSnapShot(DocumentSnapshot snapshot) {
     return UserData(
       uid: uid,
       name: snapshot.data()['name'],
@@ -53,7 +54,8 @@ class DataBaseService {
       sugars: snapshot.data()['sugar'],
     );
   }
-  Stream<UserData> get userData{
+
+  Stream<UserData> get userData {
     return brewCollection.doc(uid).snapshots().map(_userDataFromSnapShot);
-}
+  }
 }
