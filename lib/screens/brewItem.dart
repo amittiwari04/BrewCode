@@ -7,7 +7,7 @@ class BrewItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-      margin: EdgeInsets.fromLTRB(20, 6, 20, 0),
+      margin: const EdgeInsets.fromLTRB(20, 6, 20, 0),
       child: ListTile(
         leading: CircleAvatar(
           backgroundImage: AssetImage('assets/coffee_icon.png'),
